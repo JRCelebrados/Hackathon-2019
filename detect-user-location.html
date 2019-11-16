@@ -1,0 +1,89 @@
+<html>
+
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="jquery-2.1.4.js"></script>
+    <title>Detect User Location</title>
+
+    <style>
+
+      .container{
+        width: 50%;
+        margin-top: 7%;
+        /* background-color: grey; */
+        margins: 10px;
+      }
+
+      img{
+        width: 100%;
+      }
+
+      /* .map{
+        padding: 10px;
+      } */
+
+      /* button{
+        padding: 10px;
+      } */
+
+      a{
+        color: white;
+      }
+
+      body{
+
+        background-image: url("images/cars.jpg");
+        background-size: cover;
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+
+
+    <div class="container">
+
+      <!-- <button class="btn btn-lg btn-primary btn-block" id="location-button">
+        Allow App To Get Location
+      </button> -->
+
+      <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href = 'part1geolocation.html';" value="login"/>
+        Allow App To Get Location
+      </button>
+
+      <div id="output"></div>
+      <div class="map">
+        <img src="images/map.jpg">
+      </div>
+
+    </div>
+
+    <script>
+
+            $('#location-button').click(function(){
+
+              if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(function(position){
+                    console.log(position);
+                    $.get( "http://maps.googleapis.com/maps/api/geocode/json?latlng="+ position.coords.latitude + "," + position.coords.longitude +"&sensor=false", function(data) {
+                      console.log(data);
+                    })
+                    var img = new Image();
+                    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=800x400&sensor=false";
+                    $('#output').html(img);
+                  });
+
+              }
+            });
+
+    </script>
+
+  </body>
+
+</html>

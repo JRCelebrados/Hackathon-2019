@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Account</title>
+
+  <style>
+
+    .top{
+      background-color: #007bff;
+    }
+
+    h1{
+      padding: 20px;
+      color: white;
+    }
+
+    h3{
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    img{
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+    }
+
+    #image{
+      text-align: center;
+      padding: 10px;
+    }
+
+    .col{
+      padding: 15px;
+    }
+
+    .information{
+      padding: 25px;
+    }
+
+    .container{
+      padding: 20px;
+    }
+
+    .row{
+      background: #F5F5F5;
+      margin: 10px;
+    }
+
+    .jumbotron mt-3{
+      opacity: 50%;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="top">
+    <h1>Parking Spots</h1>
+  </div>
+
+  <!-- <nav class="w3-sidebar w3-bar-block w3-card" style="width:30%">
+
+    <div class="w3-red">
+      <a href="javascript:void(0)" onclick="closeSidebar()"
+      class="w3-button w3-display-topright w3-xlarge">X</a>
+        <div class="w3-padding-large w3-center">
+          <img class="w3-circle" src="img_avatar.jpg" alt="avatar">
+       </div>
+      </div>
+    <a class="w3-bar-item w3-button" href="#">Home</a>
+    <a class="w3-bar-item w3-button" href="#">Friends</a>
+    <a class="w3-bar-item w3-button" href="#">Messages</a>
+
+  </nav> -->
+
+  <div class="container" style="width: 50%">
+
+    <div class="row">
+
+      <div class="col-4" id="image">
+        <img src="images/car.jpg">
+      </div>
+      <div class="col">
+        <div class="information">
+        <h3>Parking Space Available</h3>
+          <p>250 Bedford Park Blvd W, The Bronx, NY 10468</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-4" id="image">
+        <img src="images/car.jpg">
+      </div>
+      <div class="col">
+        <div class="information">
+        <h3>Will Be Available</h3>
+          <p>75 W 205th St, The Bronx, NY 10468</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-4" id="image">
+        <img src="images/car.jpg">
+      </div>
+      <div class="col">
+        <div class="information">
+        <h3>Limited Spaces</h3>
+          <p>2501 Grand Concourse, The Bronx, NY 10468</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <script>
+
+    function openSidebar() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function closeSidebar() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+
+  </script>
+
+</body>
+
+</html>
